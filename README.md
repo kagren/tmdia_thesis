@@ -6,8 +6,10 @@ Mammographic Imaging" available [here](https://urn.kb.se/resolve?urn=urn:nbn:se:
 # Installation
 
 ```
-pip install -r requirements.txt
+conda create --name <env> --file requirements.txt
 ````
+
+The training code assumes Wandb is setup and logged in in the shell environment where you are running the script. If you do not want to use Wandb, comment out the Wandb call from the code.
 
 # Reproduce results
 
@@ -30,6 +32,7 @@ The code in ```main_parallel.py``` supports multi GPU training and will automati
 |mixup       |store_true|Set this flag to train using the Mixup variant of SimClr or SimSiam|
 |model_type |resnet18 or resnet50|The backbone model|
 |epochs|int|Amount of epochs to train for|
+
 
 # Examples
 
